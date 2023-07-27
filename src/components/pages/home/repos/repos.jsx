@@ -20,7 +20,7 @@ const Repos = (props) => {
           namespace, name, id, build, active, slug,
         }) => (
           <Link
-            to={`/${namespace}/${name}${active ? '' : '/settings'}`}
+            to={`/${encodeURIComponent(namespace)}/${name}${active ? '' : '/settings'}`}
             key={id}
           >
             <div className={cx('item', build ? null : 'inactive')}>
