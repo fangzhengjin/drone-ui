@@ -3,7 +3,7 @@ import getFullDateRepresentation from './get-full-date-representation';
 import { humanizeEvent, humanizeStepStatus } from './humanizers';
 import pick from './pick';
 import searchRepos from './search-repos';
-import slugProcess from './slug-process';
+import slugEncode from './slug-process';
 import sortRepos, { byBuildCreatedAtDesc, byRepoNameAsc } from './sort-repos';
 
 export {
@@ -16,5 +16,5 @@ export {
   pick,
   byBuildCreatedAtDesc,
   byRepoNameAsc,
-  slugProcess,
+  slugEncode,
 };

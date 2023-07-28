@@ -9,7 +9,7 @@ import { useOnClickOutside } from 'hooks';
 import { useStore } from 'hooks/store';
 import { ReactComponent as ArrowBack } from 'svg/arrow.svg';
 import { ReactComponent as SearchIcon } from 'svg/search.svg';
-import { searchRepos, sortRepos, slugProcess } from 'utils';
+import { searchRepos, sortRepos, slugEncode } from 'utils';
 
 import styles from './search-drawer.module.scss';
 
@@ -29,7 +29,7 @@ const SearchCard = ({ query, slug, handleLinkClick }) => (
         <b>Repositories</b>
       </span>
       <p className={cx('search-card-content')}>
-        <Link to={`/${slugProcess(slug)}`} onClick={handleLinkClick}>{slug}</Link>
+        <Link to={`/${slugEncode(slug)}`} onClick={handleLinkClick}>{slug}</Link>
       </p>
     </div>
   </div>
