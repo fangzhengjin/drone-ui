@@ -19,7 +19,7 @@ const ReposRecent = (props) => {
       {!!repos?.length && props.repos.map(({
         namespace, name, build, id,
       }) => (
-        <Link to={`/${namespace}/${name}`} key={id}>
+        <Link to={`/${encodeURIComponent(namespace)}/${name}`} key={id}>
           <div className={cx('card')}>
             <div className={cx('header')}>
               <h3 className={cx('title')}>
